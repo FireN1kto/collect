@@ -10,13 +10,12 @@ class CollectTest extends TestCase
         $this->collect = new Collect();
     }
 
-    public function testShift()
+    public function testCount()
     {
         $this->collect->push(1);
         $this->collect->push(2);
         $this->collect->push(3);
 
-        $this->collect->shift();
-        $this->assertEquals([2, 3], $this->collect->toArray());
+        $this->assertEquals(3, $this->collect->count());
     }
 }
